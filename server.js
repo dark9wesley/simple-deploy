@@ -1,15 +1,7 @@
 const http = require('node:http')
+const fs = require('node:fs')
 
-const html = `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title></title>
-</head>
-<body>
-  hello, wesley. 
-</body>
-</html>`
+const html = fs.readFileSync('./index.html')
 
 const server = http.createServer((req, res) => res.end(html))
 
