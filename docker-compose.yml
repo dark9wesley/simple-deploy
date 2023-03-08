@@ -6,3 +6,9 @@ services:
       dockerfile: node.Dockerfile
     ports:
       - 8080:8000
+  nginx-app:
+    build:
+      context: .
+      dockerfile: nginx.Dockerfile
+    ports:
+      - 4000:80
