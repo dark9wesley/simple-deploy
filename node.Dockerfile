@@ -6,6 +6,7 @@ WORKDIR /app
 
 # 将宿主机代码添加至工作目录
 ADD . /app
+RUN ls -lah
 
 # 安装依赖
 RUN yarn
